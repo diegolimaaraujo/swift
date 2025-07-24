@@ -1,0 +1,151 @@
+//
+//  ContentView.swift
+//  testDrive
+//
+//  Created by Diego Lima Araújo on 23/07/25.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+        var body: some View {
+            NavigationStack {
+            VStack {
+                
+                
+                
+                Image("Bird_TD_25")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+                
+                HStack{
+                    Text("APP:")
+                        .font(.system(size: 12
+                                      , weight: .heavy, design: .serif))
+                        .italic()
+                        .foregroundColor(.orange)
+                    
+                    Text("Leiturador!")
+                        .font(.system(size: 57
+                                      , weight: .heavy, design: .serif))
+                        .italic()
+                }
+                Text(" ")
+                Spacer()
+                
+                NavigationLink("Tela de Leitura"){
+                    telaLeitura()
+                }
+                        .font(.custom("Baskerville", size: 22))
+                        .foregroundColor(.white)
+                        .bold()
+                        .padding()
+                        .background(Color(red: 0.9, green: 0.4, blue: 0.01))
+                        .cornerRadius(22)
+                
+                NavigationLink("Habilidades"){
+                    telaElementos()
+                }
+                        .font(.custom("Baskerville", size: 22))
+                        .foregroundColor(.white)
+                        .bold()
+                        .padding()
+                        .background(Color(red: 0.2, green: 0.4, blue: 0.01))
+                        .cornerRadius(22)
+                
+                NavigationLink("Saiba Mais"){
+                    telaOutros()
+                }
+                        .font(.custom("Baskerville", size: 22))
+                        .foregroundColor(.white)
+                        .bold()
+                        .padding()
+                        .background(Color(red: 0.2, green: 0.4, blue: 0.9))
+                        .cornerRadius(22)
+                
+                
+                Spacer()
+                Text(" ")
+                Divider()
+                Text(" ")
+                
+                Text("by Diego Lima Araújo")
+                    .font(.system(size: 14, weight: .light, design: .serif))
+                    .italic()
+                
+                
+                
+                
+            }
+            .padding()
+        }
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+// Tela 1 - Tela de Leitura
+
+struct telaLeitura: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Tela de Leitura")
+                .font(.custom("Baskerville", size: 72))
+                .foregroundColor(.orange)
+                .bold()
+            Image("Livro_Leitura")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Divider()
+            Text("Aqui serão disponibilizados materiais de leitura diversificados.")
+                .font(.custom("Baskerville", size: 25))
+        }
+        .padding()
+        .navigationTitle("Tela de Leitura")
+    }
+}
+
+// Tela 2 - Tela de Elementos
+
+struct telaElementos: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Habilidades")
+                .font(.custom("Baskerville", size: 57))
+                .foregroundColor(.green)
+                .bold()
+            Image("habil_1")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Divider()
+            Text("Aqui você pode obter habilidades de leitura mais sofisticadas.")
+                .font(.custom("Baskerville", size: 25))
+        }
+        .padding()
+        .navigationTitle("Tela de Leitura")
+    }
+}
+
+// Tela 3 - Tela de Outros
+
+struct telaOutros: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Saiba Mais!")
+                .font(.custom("Baskerville", size: 72))
+                .foregroundColor(.blue)
+                .bold()
+            Image("sab_1")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            Divider()
+            Text("Somos uma ferramenta em desenvolvimento feita 100% em Swift pelo Diego Lima Araújo.")
+                .font(.custom("Baskerville", size: 25))
+        }
+        .padding()
+        .navigationTitle("Tela de Leitura")
+    }
+}
