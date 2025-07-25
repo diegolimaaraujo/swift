@@ -149,3 +149,11 @@ struct telaOutros: View {
         .navigationTitle("Tela de Leitura")
     }
 }
+
+// A presente versão já foi testada no Simulador > Iphone 15 (disponível no XCode)
+
+// Finalização dos Elementos Básicos do APP (Geral)
+
+// Considerações complementares: o aplicativo consegue comportar o número de telas aumejado, contanto que se adicione mais linhas em NavigationStack usando – de forma expansiva – novos Stacks.
+
+// Ainda é necessário fazer muitos incrementos na aplicação a partir do uso das bibliotecas disponibilizadas pelo SwiftUI
