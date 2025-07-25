@@ -4,6 +4,7 @@
 
 //  Created by Diego Lima Araújo on 23/07/25.
 
+'''swit
 
 import SwiftUI
 
@@ -157,3 +158,5 @@ struct telaOutros: View {
 // Considerações complementares: o aplicativo consegue comportar o número de telas aumejado, contanto que se adicione mais linhas em NavigationStack usando – de forma expansiva – novos Stacks.
 
 // Ainda é necessário fazer muitos incrementos na aplicação a partir do uso das bibliotecas disponibilizadas pelo SwiftUI
+
+'''
