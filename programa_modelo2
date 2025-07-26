@@ -1,0 +1,90 @@
+//
+// Estrutura Geral de Aplicativo com Navegação entre Telas
+//
+// Criado por Diego Lima Araújo (elaborei especificamente esse modelo sem usar a IA, mas tendo como base o programa Leiturador > inspirado em uma formação em iOs)
+// A IA foi utilizada para descobrir como personalizar as cores de elementos visuais na tela
+
+
+// Nessa linha inicial, ativamos o SwiftUI que dinamiza a elaboração de APPs
+
+import SwiftUI
+
+// Aqui iniciamos o desenvolvimento da disposição dos "Conteúdos Visíveis na Tela"
+
+struct ContentView: View {
+        var body: some View {
+          NavigationStack {
+          VStack {
+
+
+
+            Image("Imagem_Escolhida_1") // Essa imagem aparece na Tela 1 (em destaque)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+
+// O HStack a seguir organiza elementos na horizontal
+
+            HStack{
+              Text("APP: ")
+                .font(.system(size: 12
+                              , weight: .heavy, design: .serif))
+                .italic()
+                .foregroundColor(.orange)
+
+              Text("Título Original Aqui")
+                .font(.system(size: 57
+                              , weight: .heavy, design: .serif))
+                .italic()
+
+            }
+
+            NavigationLink("Recursos da TELA 1"){
+                tela1()
+            }
+                    .font(.custom("Baskerville", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.9, green: 0.4, blue: 0.01))
+                    .cornerRadius(22)
+
+            NavigationLink("Recursos da TELA2"){
+                tela2()
+            }
+                    .font(.custom("Baskerville", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.2, green: 0.4, blue: 0.01)
+                    .cornerRadius(22)
+
+            NavigationLink("Recursos da TELA3"){
+                tela3()
+            }
+                    .font(.custom("Baskerville", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.2, green: 0.4, blue: 0.9)
+                    .cornerRadius(22)
+
+
+                Divider()
+                
+                Text("by Diego Lima Araújo")
+                    .font(.system(size: 14, weight: .light, design: .serif))
+                    .italic()
+
+        }
+        
+        // O padding é usado aqui para gerar os espaçamentos médios desejados
+        
+        .padding()
+    }
+}
+
+... continuarei depois ...
+
+
+                    
+                    
