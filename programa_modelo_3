@@ -1,0 +1,78 @@
+//
+// Rascunho de um Projeto no contexto de Biblioteca (demanda real com base em protótipo elaborado no Figma)
+//
+// Criado por Diego Lima Araújo
+//
+
+
+import SwiftUI
+
+struct ContentView: View {
+        var body: some View {
+          NavigationStack {
+          VStack {
+
+            Image("Imagem_Biblioteca_1") // Essa imagem aparece na Tela 1 (em destaque)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+
+// O HStack a seguir organiza elementos na horizontal
+
+            HStack{
+              Text("APP: ")
+                .font(.system(size: 12
+                              , weight: .heavy, design: .serif))
+                .italic()
+                .foregroundColor(.orange)
+
+              Text("Busca-Livros")
+                .font(.system(size: 57
+                              , weight: .heavy, design: .serif))
+                .italic()
+
+            }
+
+            NavigationLink("Livros do Acervo"){
+                tela1()
+            }
+                    .font(.custom("Baskerville", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.0, green: 0.9, blue: 0.0))
+                    .cornerRadius(22)
+
+            NavigationLink("Livro da Sorte"){ // A ideia é implementar um Sorteador de livros
+                tela2()
+            }
+                    .font(.custom("Baskerville", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.0, green: 0.0, blue: 0.09)
+                    .cornerRadius(22)
+
+            NavigationLink("Cadastro"){
+                tela3()
+            }
+                    .font(.custom("Baskerville", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.9, green: 0.0, blue: 0.0)
+                    .cornerRadius(22)
+
+
+                Divider()
+                
+                Text("by Diego Lima Araújo")
+                    .font(.system(size: 14, weight: .light, design: .serif))
+                    .italic()
+
+        }
+        
+        .padding()
+    }
+}
+
+... continuarei depois ...
