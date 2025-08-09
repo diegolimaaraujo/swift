@@ -190,6 +190,18 @@ struct telaComece: View {
                 .padding()
                 .background(Color(red: 0.50, green: 0.12, blue: 0.16))
                 .cornerRadius(7)
+                
+                // Testando a Implementação do Dado de 12 lados (não vai aparecer nessa tela > só nas que precisarem de dados)
+                
+                NavigationLink("Jogue o Dado"){
+                    DiceView()
+                }
+                .font(.custom("Cochin", size: 23))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.16, green: 0.50, blue: 0.16))
+                .cornerRadius(7)
             }
             .padding()
             .navigationTitle("Comece a Aventura")
@@ -246,7 +258,66 @@ struct telaJogabilidade: View {
     }
 }
 
+
+// Tela de Dados
+
+struct DiceView: View {
+    @State private var randomNumber = 1
+    
+    var body: some View {
+        ZStack {
+            Image("fundo3")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+               
+                Text(" ")
+                
+                Text("CLICAR no NÚMERO:")
+                    .font(.custom("Cochin", size: 23))
+                    .bold()
+                
+                Text("= LANÇAR o DADO")
+                    .font(.custom("Cochin", size: 27))
+                    .foregroundColor(Color(red: 0.50, green: 0.12, blue: 0.16))
+                    .italic()
+                    .bold()
+                    .padding()
+                
+                Image("dado1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 225)
+                
+                Divider()
+                    .padding()
+                Text("O dado possui 12 Lados, caso apareça o 0, lance novamente.")
+                    .font(.custom("Cochin", size: 17))
+                    .italic()
+                
+                Text("\(randomNumber)")
+                    .font(.custom("Copperplate", size: 237))
+                    .foregroundColor(Color(red: 0.50, green: 0.12, blue: 0.16))
+                    .bold()
+                    .padding()
+                    .onTapGesture {
+                        // Gerar um novo número aleatório
+                        randomNumber = Int.random(in: 0...12)
+                        
+                    }
+            }
+        }
+    }
+}
+
+#Preview {
+    DiceView()
+}
+
 // Tela 4 - Tela de Outros
+
 
 struct trajeto2: View {
     var body: some View {
