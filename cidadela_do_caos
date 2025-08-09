@@ -1,0 +1,245 @@
+
+//  Conversão de Narrativa de Avntura para Aplicativo em Swift > Jogável
+//  Obra: A Cidadela do Caos, de Steve Jackson's
+//
+//  App by Diego Lima Araújo on 09/08/2025.
+//  Visualize a tela inicial no link: https://drive.google.com/file/d/1Enm4OAebf_g7SjM3lGDCzc8t_dEQbYYo/view?usp=share_link
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        NavigationStack {
+            
+            ZStack {
+                Image("fundo3")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+
+                    
+                    VStack{
+                        
+                        Text("A Cidadela do Caos")
+                            .font(.custom("Copperplate", size: 47))
+                            .italic()
+                            .foregroundColor(Color(red: 0.50, green: 0.16, blue: 0.12))
+                            .multilineTextAlignment(.center)
+                            .lineSpacing(1)
+                            .padding()
+                        
+                        Image("fundo2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 350, height: 275)
+                    
+                    }
+                    Text(" ")
+                    Spacer()
+                    
+                    NavigationLink("Prólogo da História"){
+                        telaLeitura()
+                    }
+                    .font(.custom("Cochin", size: 22))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(7)
+                    
+                    NavigationLink("Comece a Aventura"){
+                        telaElementos()
+                    }
+                    .font(.custom("Cochin", size: 33))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                    .cornerRadius(7)
+                    
+                    NavigationLink("Entenda a Jogabilidade"){
+                        telaOutros()
+                    }
+                    .font(.custom("Cochin", size: 17))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(7)
+                    
+                    
+                    Spacer()
+                    Text(" ")
+                    Divider()
+                    Text(" ")
+                    
+                    Text("Book by Steve Jackson's / App by Diego Lima Araújo")
+                        .font(.system(size: 14, weight: .light, design: .serif))
+                        .italic()
+                    
+                }
+                
+            }
+            .padding()
+        }
+    }
+    
+}
+
+#Preview {
+    ContentView()
+}
+
+// Tela 1 - Tela de Leitura
+
+struct telaLeitura: View {
+    var body: some View {
+        ZStack {
+            ZStack {
+                Image("fundo3")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack{
+                    
+                    Image("prologo1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250, height: 225)
+                    
+                    Text("O ordeiro e generoso povo do Vale dos Salgueiros vive há oito anos sob o terror e medo do feiticeiro Balthus Dire. Terror – porque o poder dele é realmente aterrorizante – e medo causados pela notícia que acabou chegando aos ouvidos desse povo, vinda dos domínios do feiticeiro, de que seus ambiciosos planos de conquista começariam pelo próprio Vale.")
+                        .font(.custom("Baskerville", size: 14))
+                        .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    Text(" ")
+                    Text("O rei Salamon, protetor do Vale, decidiu convocá-lo por saber que você se trataria do guerreiro mais hábil para impedir Balthus Dire. A missão que você tem pela frente é extremamente perigosa, a Cidadela do Caos está repleta de uma multidão de criaturas assombrosas... haverá momentos que você deverá confiar na sua espada para sobreviver.")
+                        .font(.custom("Baskerville", size: 14))
+                        .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    Text(" ")
+                    Text("Há um caminho melhor para atravessar a cidadela. Se você o descobrir, terá êxito... mas talvez você precise de várias viagens para encontrar este caminho.")
+                        .font(.custom("Baskerville", size: 14))
+                        .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    Text(" ")
+                    Text("Você deixa o Vale dos Salgueiros na longa caminhada para a Torre Negra, de onde pretende iniciar seu percurso na Cidadela... Siga para a aventura")
+                        .font(.custom("Baskerville", size: 14))
+                        .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    Text(" ")
+                    NavigationLink("Comece a Aventura"){
+                        telaElementos()
+                    }
+                    .font(.custom("Cochin", size: 23))
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                    .cornerRadius(7)
+                    
+                }
+            }
+            .padding()
+            .navigationTitle("Tela de Leitura")
+        }
+    }
+    }
+
+
+// Tela 2 - Tela de Elementos
+
+struct telaElementos: View {
+    var body: some View {
+        ZStack {
+            Image("fundo3")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("trajeto1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 400, height: 375)
+                
+                Text("TRAJETO 1")
+                    .font(.custom("Baskerville", size: 22))
+                    .bold()
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("O sol se põe enquanto o crepúsculo se transforma...")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Continuação...")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Continuação...")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                NavigationLink("Comece a Aventura"){
+                    telaElementos()
+                }
+                .font(.custom("Cochin", size: 23))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                .cornerRadius(7)
+            }
+            .padding()
+            .navigationTitle("Tela de Leitura")
+        }
+    }
+}
+
+// Tela 3 - Tela de Outros
+
+struct telaOutros: View {
+    var body: some View {
+        
+        ZStack {
+            Image("fundo3")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("prologo1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 225)
+                
+                Text("O ordeiro e generoso povo do Vale dos Salgueiros vive há oito anos sob o terror e medo do feiticeiro Balthus Dire. Terror – porque o poder dele é realmente aterrorizante – e medo causados pela notícia que acabou chegando aos ouvidos desse povo, vinda dos domínios do feiticeiro, de que seus ambiciosos planos de conquista começariam pelo próprio Vale.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("O rei Salamon, protetor do Vale, decidiu convocá-lo por saber que você se trataria do guerreiro mais hábil para impedir Balthus Dire. A missão que você tem pela frente é extremamente perigosa, a Cidadela do Caos está repleta de uma multidão de criaturas assombrosas... haverá momentos que você deverá confiar na sua espada para sobreviver.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Há um caminho melhor para atravessar a cidadela. Se você o descobrir, terá êxito... mas talvez você precise de várias viagens para encontrar este caminho.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Você deixa o Vale dos Salgueiros na longa caminhada para a Torre Negra, de onde pretende iniciar seu percurso na Cidadela... Siga para a aventura")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                NavigationLink("Comece a Aventura"){
+                    telaElementos()
+                }
+                .font(.custom("Cochin", size: 23))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                .cornerRadius(7)
+            }
+            .padding()
+            .navigationTitle("Tela de Leitura")
+        }
+    }
+}
