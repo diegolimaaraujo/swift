@@ -169,22 +169,44 @@ struct telaComece: View {
                     .bold()
                     .padding(.horizontal, 15) // Padding horizontal de 20 pontos
                 Text(" ")
-                Text("O sol se põe enquanto o crepúsculo se transforma...")
+                Text("O sol se põe enquanto o crepúsculo se transforma em escuridão, você começa a subir na direção da ameaçadora forma que se desenha contra o céu noturno. A Cidadela fica a menos de uma hora de escalada.")
                     .font(.custom("Baskerville", size: 14))
-                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    .padding(.horizontal, 10) // Padding horizontal de 20 pontos
                 Text(" ")
-                Text("Continuação...")
+                Text("Enquanto você pondera as possibilidades, e as histórias que terá que contar aos guardas, acaba chegando à trilha principal que conduz aos portões. Duas lanternas brilham em cada um dos lados da porta levadiça")
                     .font(.custom("Baskerville", size: 14))
-                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    .padding(.horizontal, 10) // Padding horizontal de 20 pontos
                 Text(" ")
-                Text("Continuação...")
+                Text("Você ouve grunhidos abafados ao se aproximar, e vê duas criaturas de aparência absurda. Do lado esquerdo está uma criatura horrível, com a cabeça de um cachorro e o corpo de um macaco, flexionando os seus braços fortíssimos. Do outro lado, encontra-se uma figura oposta – com corpo de cachorro e cabeça de macaco. Como você irá se apresentar para poder entrar?")
                     .font(.custom("Baskerville", size: 14))
-                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                    .padding(.horizontal, 10) // Padding horizontal de 20 pontos
                 Text(" ")
-                NavigationLink("Comece a Aventura"){
-                    telaComece()
+                NavigationLink("Especialista em Plantas Medicinais"){
+                    trajeto261()
                 }
-                .font(.custom("Cochin", size: 23))
+                
+                .font(.custom("Cochin", size: 14))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                .cornerRadius(7)
+                
+                NavigationLink("Comerciante"){
+                    trajeto230()
+                }
+                
+                .font(.custom("Cochin", size: 14))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                .cornerRadius(7)
+                
+                NavigationLink("Alguém que pede abrigo para pernoitar"){
+                    trajeto20()
+                }
+                .font(.custom("Cochin", size: 14))
                 .foregroundColor(.white)
                 .bold()
                 .padding()
@@ -196,7 +218,7 @@ struct telaComece: View {
                 NavigationLink("Jogue o Dado"){
                     DiceView()
                 }
-                .font(.custom("Cochin", size: 23))
+                .font(.custom("Cochin", size: 14))
                 .foregroundColor(.white)
                 .bold()
                 .padding()
@@ -316,10 +338,9 @@ struct DiceView: View {
     DiceView()
 }
 
-// Tela 4 - Tela de Outros
+// Tela 261 - Trajeto 261
 
-
-struct trajeto2: View {
+struct trajeto261: View {
     var body: some View {
         
         ZStack {
@@ -361,7 +382,105 @@ struct trajeto2: View {
                 .cornerRadius(7)
             }
             .padding()
-            .navigationTitle("... dentro da aventura ...")
+            .navigationTitle("Portões > Especialista em Plantas")
+        }
+    }
+}
+
+// Tela 230 - Trajeto 230
+
+struct trajeto230: View {
+    var body: some View {
+        
+        ZStack {
+            Image("fundo3")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("prologo1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 225)
+                
+                Text("O ordeiro e generoso povo do Vale dos Salgueiros vive há oito anos sob o terror e medo do feiticeiro Balthus Dire. Terror – porque o poder dele é realmente aterrorizante – e medo causados pela notícia que acabou chegando aos ouvidos desse povo, vinda dos domínios do feiticeiro, de que seus ambiciosos planos de conquista começariam pelo próprio Vale.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("O rei Salamon, protetor do Vale, decidiu convocá-lo por saber que você se trataria do guerreiro mais hábil para impedir Balthus Dire. A missão que você tem pela frente é extremamente perigosa, a Cidadela do Caos está repleta de uma multidão de criaturas assombrosas... haverá momentos que você deverá confiar na sua espada para sobreviver.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Há um caminho melhor para atravessar a cidadela. Se você o descobrir, terá êxito... mas talvez você precise de várias viagens para encontrar este caminho.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Você deixa o Vale dos Salgueiros na longa caminhada para a Torre Negra, de onde pretende iniciar seu percurso na Cidadela... Siga para a aventura")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                NavigationLink("Comece a Aventura"){
+                    telaComece()
+                }
+                .font(.custom("Cochin", size: 23))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                .cornerRadius(7)
+            }
+            .padding()
+            .navigationTitle("Portões > Comerciante")
+        }
+    }
+}
+
+// Tela 20 - Trajeto 20
+
+struct trajeto20: View {
+    var body: some View {
+        
+        ZStack {
+            Image("fundo3")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Image("prologo1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 225)
+                
+                Text("O ordeiro e generoso povo do Vale dos Salgueiros vive há oito anos sob o terror e medo do feiticeiro Balthus Dire. Terror – porque o poder dele é realmente aterrorizante – e medo causados pela notícia que acabou chegando aos ouvidos desse povo, vinda dos domínios do feiticeiro, de que seus ambiciosos planos de conquista começariam pelo próprio Vale.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("O rei Salamon, protetor do Vale, decidiu convocá-lo por saber que você se trataria do guerreiro mais hábil para impedir Balthus Dire. A missão que você tem pela frente é extremamente perigosa, a Cidadela do Caos está repleta de uma multidão de criaturas assombrosas... haverá momentos que você deverá confiar na sua espada para sobreviver.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Há um caminho melhor para atravessar a cidadela. Se você o descobrir, terá êxito... mas talvez você precise de várias viagens para encontrar este caminho.")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                Text("Você deixa o Vale dos Salgueiros na longa caminhada para a Torre Negra, de onde pretende iniciar seu percurso na Cidadela... Siga para a aventura")
+                    .font(.custom("Baskerville", size: 14))
+                    .padding(.horizontal, 15) // Padding horizontal de 20 pontos
+                Text(" ")
+                NavigationLink("Comece a Aventura"){
+                    telaComece()
+                }
+                .font(.custom("Cochin", size: 23))
+                .foregroundColor(.white)
+                .bold()
+                .padding()
+                .background(Color(red: 0.50, green: 0.12, blue: 0.16))
+                .cornerRadius(7)
+            }
+            .padding()
+            .navigationTitle("Portões > Alguém pedindo abrigo")
         }
     }
 }
