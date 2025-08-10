@@ -7,7 +7,6 @@
 //  Visualize a tela inicial no link: https://drive.google.com/file/d/1Enm4OAebf_g7SjM3lGDCzc8t_dEQbYYo/view?usp=share_link
 //
 
-
 import SwiftUI
 
 struct ContentView: View {
