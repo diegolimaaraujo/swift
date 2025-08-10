@@ -231,7 +231,7 @@ struct telaComece: View {
     }
 }
 
-// Tela 3 - Tela de Outros
+// Tela 3 - Tela do Prólogo
 
 struct telaJogabilidade: View {
     var body: some View {
@@ -294,30 +294,27 @@ struct DiceView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-               
-                Text(" ")
-                
-                Text("CLICAR no NÚMERO:")
-                    .font(.custom("Cochin", size: 23))
-                    .bold()
-                
-                Text("= LANÇAR o DADO")
-                    .font(.custom("Cochin", size: 27))
-                    .foregroundColor(Color(red: 0.50, green: 0.12, blue: 0.16))
-                    .italic()
-                    .bold()
-                    .padding()
                 
                 Image("dado1")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 250, height: 225)
+                    .frame(width: 225, height: 200)
                 
+                if randomNumber > 5 {
+                    
+                    Image("win2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250, height: 225)
+                    
+                            } else {
+                                Image("loss2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 250, height: 225)
+                                    
+                            }
                 Divider()
-                    .padding()
-                Text("O dado possui 12 Lados, caso apareça o 0, lance novamente.")
-                    .font(.custom("Cochin", size: 17))
-                    .italic()
                 
                 Text("\(randomNumber)")
                     .font(.custom("Copperplate", size: 237))
@@ -326,17 +323,16 @@ struct DiceView: View {
                     .padding()
                     .onTapGesture {
                         // Gerar um novo número aleatório
-                        randomNumber = Int.random(in: 0...12)
+                        randomNumber = Int.random(in: 1...12)
                         
                     }
+                
             }
         }
     }
 }
 
-#Preview {
-    DiceView()
-}
+
 
 // Tela 261 - Trajeto 261
 
